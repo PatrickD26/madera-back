@@ -1,20 +1,24 @@
 security:
+    enable_authenticator_manager: true
+    encoders:
+        Lexik\Bundle\JWTAuthenticationBundle\Security\User\JWTUser:
+            algorithm: bcrypt
+    
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         app_user_provider:
             entity:
-                class: 'App\Entity\User'
-                property: 'email'
+                class: App\Entity\Employee
+                property: username
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         login:
-            pattern:  ^/api/login$
+            pattern:  ^/api/login
             stateless: true
-            anonymous: true
             json_login:
-                check_path:               /api/login
+                check_path:               /api/login_check
                 success_handler:          lexik_jwt_authentication.handler.authentication_success
                 failure_handler:          lexik_jwt_authentication.handler.authentication_failure
         api:
@@ -22,12 +26,9 @@ security:
             stateless: true
             guard:
                 authenticators:
-                    - lexik_jwt_authentication.jwt_token_authenticator
-        # main:
-        #     stateless: true
-        #     anonymous: true
-        #     lazy: true
-        #     provider: users_in_memory
+                    - lexik_jwt_authentication.jwt_token_authenticator       # main:
+      #main:
+       #     provider: app_user_provider
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
