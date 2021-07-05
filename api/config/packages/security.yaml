@@ -1,14 +1,14 @@
 security:
     enable_authenticator_manager: true
     encoders:
-        Lexik\Bundle\JWTAuthenticationBundle\Security\User\JWTUser:
-            algorithm: bcrypt
+        App\Entity\User:
+            algorithm: plaintext
     
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         app_user_provider:
             entity:
-                class: App\Entity\Employee
+                class: App\Entity\User
                 property: username
     firewalls:
         dev:

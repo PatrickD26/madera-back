@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a0cbdd9-b9a7-449b-bd82-02363eb10c87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/OpenApi/JwtDecorator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/config/packages/lexik_jwt_authentication.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/packages/lexik_jwt_authentication.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/migrations/Version20200828181711.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/Controller/SecurityController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/Entity/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.override.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.override.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/Entity/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/Entity/Greeting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/Repository/EmployeeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/Repository/UserRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +163,7 @@
       <workItem from="1623415287993" duration="1342000" />
       <workItem from="1624651142496" duration="2621000" />
       <workItem from="1625169961651" duration="4407000" />
-      <workItem from="1625467462006" duration="15086000" />
+      <workItem from="1625467462006" duration="16399000" />
     </task>
     <task id="LOCAL-00001" summary="Done with entities importing, still need to establish the relations between them">
       <created>1625468445651</created>

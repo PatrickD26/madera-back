@@ -3,22 +3,23 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
-use App\Repository\EmployeeRepository;
+use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use InvalidArgumentException;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
- * @ORM\Entity(repositoryClass=EmployeeRepository::class)
- * @ORM\Table(name="`employee`")
+ * @ORM\Entity(repositoryClass=UserRepository::class)
+ * @ORM\Table(name="`user`")
  */
 #[ApiResource]
 
-class Employee implements UserInterface
+class User implements UserInterface
 {
     public function __construct(string $username, $password, array $roles = [])
     {
         if (empty($username)) {
-            throw new \InvalidArgumentException('The username cannot be empty.');
+            throw new InvalidArgumentException('The username cannot be empty.');
         }
 
         $this->password = $password;
@@ -89,7 +90,7 @@ class Employee implements UserInterface
         return $this;
     }
 
-    public function getSalt()
+    public function getSalt(): void
     {
         // TODO: Implement getSalt() method.
     }
