@@ -9,12 +9,6 @@ ARG CADDY_VERSION=2
 
 # "php" stage
 FROM php:${PHP_VERSION}-fpm-alpine AS api_platform_php
-ARG XDEBUG_VERSION=3.0.2
-RUN set -eux; \
- apk add --no-cache --virtual .build-deps $PHPIZE_DEPS; \
- pecl install xdebug-$XDEBUG_VERSION; \
- docker-php-ext-enable xdebug; \
- apk del .build-deps
 
 # persistent / runtime deps
 RUN apk add --no-cache \
